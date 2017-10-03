@@ -3,19 +3,49 @@ package lit.controller;
 import java.util.List;
 import java.util.ArrayList;
 import lit.model.Donut;
+import lit.view.PopupDisplay;
 
 public class LitController 
 {
 	//< > are gang signs.   
 	private List<Donut> donutList;
+	private PopupDisplay display;
 	
 	public LitController()
 	{
 		donutList = new ArrayList<Donut>();
+		display = new PopupDisplay();
 	}
 	
 	public void start()
 	{
+		Donut temp = new Donut();
+		
 		donutList.add(new Donut());
+		fillTheList();
+	}
+	
+	private void showTheList()
+	{
+		for (int index = 0; index < donutList.size(); index +=1)
+		{
+			display.displayText(donutList.get(index).toString());
+		}
+	}
+	
+	private void fillTheList()
+	{
+		Donut jellyFilled = new Donut("Jelly Filled!");
+		Donut springSmitch = new Donut("Spring-Smitch for Luniticks!");
+		Donut chocolate = new Donut("Chocolate Yummy!");
+		Donut glazed = new Donut("Glaze it!");
+		Donut creamFilled = new Donut("Mmmmmm... Creamy!");
+		
+		donutList.add(jellyFilled);
+		donutList.add(springSmitch);
+		donutList.add(chocolate);
+		donutList.add(glazed);
+		donutList.add(creamFilled);
+		
 	}
 }
