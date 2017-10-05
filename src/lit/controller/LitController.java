@@ -43,7 +43,10 @@ public class LitController
 					display.displayText("The best flavor ever!!!!");
 				}
 			}
-			
+			for (int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
+			{
+				display.displayText(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
+			}
 			display.displayText(donutList.get(index).toString());
 		}
 	}
