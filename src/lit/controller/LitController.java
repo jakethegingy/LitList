@@ -23,12 +23,27 @@ public class LitController
 		
 		donutList.add(new Donut());
 		fillTheList();
+		showTheList();
 	}
 	
 	private void showTheList()
 	{
+		String favorite = "Glazed with sprinkles, but only sprinkles on half of it";
 		for (int index = 0; index < donutList.size(); index +=1)
 		{
+			String currentFlavor = donutList.get(index).getFlavor();
+			
+			Donut currentDonut = donutList.get(index);
+			String flavor = currentDonut.getFlavor();
+			
+			if (currentFlavor.equals(favorite)) 
+			{
+				for (int woop = 0; woop < 5; woop +=1)
+				{
+					display.displayText("The best flavor ever!!!!");
+				}
+			}
+			
 			display.displayText(donutList.get(index).toString());
 		}
 	}
@@ -46,6 +61,5 @@ public class LitController
 		donutList.add(chocolate);
 		donutList.add(glazed);
 		donutList.add(creamFilled);
-		
 	}
 }

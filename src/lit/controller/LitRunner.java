@@ -1,5 +1,10 @@
 package lit.controller;
 
+/**
+ * 
+ * @author jham7125
+ *
+ */
 public class LitRunner 
 {
 	public static void main(String [] args)
