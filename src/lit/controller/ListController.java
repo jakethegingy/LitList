@@ -16,6 +16,7 @@ public class ListController
 	{
 		donutList = new ArrayList<Donut>();
 		display = new PopupDisplay();
+		toppingList = new ArrayList<String>();
 	}
 	
 	public void start()
@@ -27,8 +28,9 @@ public class ListController
 		showTheList();
 		changeTheList();
 		showTheList();
-//		displayText();
-//		listTheToppings();
+		listTheToppings();
+		displayToppings();
+		
 	}
 	
 	private void showTheList()
@@ -73,15 +75,15 @@ public class ListController
 
 	private void listTheToppings()
 	{	
-		toppingList.add("sprinklez");
-		toppingList.add("fudge");
-		toppingList.add("bleach");
-		toppingList.add("ginger");
-		toppingList.add("glassShards");
-		toppingList.add("usedMedicalNeedles");
-		toppingList.add("hornets");
-		toppingList.add("icyHot");
-		toppingList.add("swass");
+		toppingList.add("Sprinklez");
+		toppingList.add("Fudge");
+		toppingList.add("Bleach");
+		toppingList.add("Ginger");
+		toppingList.add("Glass Shards");
+		toppingList.add("Used Medical Needles");
+		toppingList.add("Hornets");
+		toppingList.add("Icy Hot");
+		toppingList.add("Swass");
 	}
 	
 	private void changeTheList()
@@ -101,13 +103,13 @@ public class ListController
 		
 		display.displayText("This is the new Donut Menu.");
 	}
-	private void displayText()
+	private void displayToppings()
 	{
 		display.displayText("Here are the different toppings that you may put on your donut.");
 		
 		for (int index = 0; index < toppingList.size(); index +=1)
 		{
-			display.displayText(toppingList);
+			display.displayText(toppingList.get(index));
 		}
 	}
 
