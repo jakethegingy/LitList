@@ -9,7 +9,7 @@ public class LitRunner
 {
 	public static void main(String [] args)
 	{
-		LitController myApp = new LitController();
+		ListController myApp = new ListController();
 		myApp.start();
 	}
 }
