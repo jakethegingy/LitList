@@ -1,9 +1,10 @@
-package lit.controller;
+package useful.controller;
 //importing information from the model file using lit.model.Donut    lit.model says where and .Donut says what I want in that file. 
 import java.util.List;
 import java.util.ArrayList;
-import lit.model.Donut;
-import lit.view.PopupDisplay;
+
+import useful.model.Donut;
+import useful.view.PopupDisplay;
 
 public class ListController 
 {
@@ -113,7 +114,7 @@ public class ListController
 		}
 	}
 
-	public ArrayList<Donut> getDonutLIst()
+	public ArrayList<Donut> getDonutList()
 	{
 		return (ArrayList<Donut>) donutList;
 	}

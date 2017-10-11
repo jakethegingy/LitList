@@ -1,4 +1,4 @@
-package lit.model;
+package useful.model;
 
 public class Donut 
 {
@@ -11,7 +11,7 @@ public class Donut
 	
 	public Donut()
 	{
-		this.flavor = "plain ";
+		this.flavor = "plain";
 		this.shape = "round";
 		this.temperature = 100;
 		this.hasSprinkles = false;

@@ -1,4 +1,4 @@
-package lit.view;
+package useful.view;
 
 import javax.swing.JOptionPane;
 
