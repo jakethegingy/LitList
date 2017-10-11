@@ -23,7 +23,13 @@ public class ListController
 	public void start()
 	{
 		Donut temp = new Donut();
-		
+		ArrayList<String> tempList = new ArrayList<String>();
+		tempList.add("this is a word sequence");
+		tempList.add("DonutTests.zip");
+		tempList.add("");
+		tempList.add("My name is inigomontoya, prepare to die.");
+		display.displayText("the longest string in the templist is: " + maxLength(tempList) + " long.");
+		display.displayText("It is: " + longestString(tempList) + " this long.");
 		donutList.add(new Donut());
 		fillTheList();
 		showTheList();
@@ -85,6 +91,36 @@ public class ListController
 		toppingList.add("Hornets");
 		toppingList.add("Icy Hot");
 		toppingList.add("Swass");
+	}
+	
+	public String longestString(ArrayList<String> myList)
+	{
+		int max = 0;
+		String longest = "";
+		
+		for (int index = 0; index < myList.size(); index += 1)
+		{
+			if (myList.get(index).length() > max)
+			{
+				max = myList.get(index).length();
+				longest = myList.get(index);
+			}
+		}
+		
+		return longest;
+	}
+	
+	public int maxLength(ArrayList<String>myList)
+	{
+		int max = 0;
+		for(int index = 0; index < myList.size(); index +=1)
+		{
+			if (max < myList.get(index).length())
+			{
+				max = myList.get(index).length();
+			}
+		}
+		return max;
 	}
 	
 	private void changeTheList()
